@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Rownumber</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>First</th>
+      <th>Last</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data.each do |datum| %>
+      <tr>
+        <td><%= datum.identifier %></td>
+        <td><%= datum.rownumber %></td>
+        <td><%= datum.phone %></td>
+        <td><%= datum.email %></td>
+        <td><%= datum.first %></td>
+        <td><%= datum.last %></td>
+        <td><%= link_to 'Show', datum %></td>
+        <td><%= link_to 'Edit', edit_datum_path(datum) %></td>
+        <td><%= link_to 'Destroy', datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<h1>Errorlogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Rownumber</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @errorlogs.each do |errorlog| %>
+      <tr>
+        <td><%= errorlog.identifier %></td>
+        <td><%= errorlog.rownumber %></td>
+        <td><%= errorlog.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

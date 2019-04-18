@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @errorlog.identifier %>
+</p>
+
+<p>
+  <strong>Rownumber:</strong>
+  <%= @errorlog.rownumber %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @errorlog.description %>
+</p>
+
+<%= link_to 'Edit', edit_errorlog_path(@errorlog) %> |
+<%= link_to 'Back', errorlogs_path %>

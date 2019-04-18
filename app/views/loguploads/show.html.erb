@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Identifier:</strong>
+  <%= @logupload.identifier %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @logupload.filename %>
+</p>
+
+<p>
+  <strong>Filelocation:</strong>
+  <%= @logupload.filelocation %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @logupload.date %>
+</p>
+
+<p>
+  <strong>Version:</strong>
+  <%= @logupload.version %>
+</p>
+
+<%= link_to 'Edit', edit_logupload_path(@logupload) %> |
+<%= link_to 'Back', loguploads_path %>

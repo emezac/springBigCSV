@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Errorlogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Identifier</th>
+      <th>Rownumber</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @errorlogs.each do |errorlog| %>
+      <tr>
+        <td><%= errorlog.identifier %></td>
+        <td><%= errorlog.rownumber %></td>
+        <td><%= errorlog.description %></td>
+        <td><%= link_to 'Show', errorlog %></td>
+        <td><%= link_to 'Edit', edit_errorlog_path(errorlog) %></td>
+        <td><%= link_to 'Destroy', errorlog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Errorlog', new_errorlog_path %>
